@@ -1,0 +1,147 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2; }
+
+.marg, #Top .top, #for, #for .f-right .right-t .in-t, #for .f-right .right-t .in-b, #for .f-right .right-t .in-rem, #for .f-right .right-t #log-btn, #for .f-right .right-t, #for .f-right .right-b {
+  margin: 0 auto; }
+
+#Top {
+  height: 89px;
+  border-bottom: 1px solid #e7e7e7;
+  background: #fff; }
+  #Top .top {
+    width: 970px;
+    height: 100%;
+    padding-top: 20px; }
+    #Top .top img {
+      float: left; }
+    #Top .top .Tright {
+      float: right;
+      font-size: 12px; }
+      #Top .top .Tright b {
+        color: #8e8e8e;
+        float: left;
+        padding: 18px 0; }
+      #Top .top .Tright a {
+        float: left;
+        color: #000;
+        padding: 18px 0; }
+      #Top .top .Tright a:nth-of-type(1) {
+        margin: 0 35px 0 11px; }
+      #Top .top .Tright a:nth-of-type(1) span {
+        float: left;
+        width: 18px;
+        height: 17px;
+        background: url(../loginImg/need_03.jpg) no-repeat center; }
+      #Top .top .Tright a:nth-of-type(2) span {
+        float: left;
+        width: 18px;
+        height: 17px;
+        background: url(../loginImg/inline_03.jpg) no-repeat center; }
+
+#for {
+  padding: 70px 0 130px 0;
+  width: 970px; }
+  #for .f-left {
+    width: 438px;
+    height: 438px;
+    margin-right: 22px;
+    float: left; }
+  #for .f-right {
+    position: relative;
+    width: 488px;
+    height: 435px;
+    border: 1px solid #e7e7e7;
+    float: left;
+    background: #fff; }
+    #for .f-right .right-t {
+      background: url(../loginImg/loginfoot_03.jpg) no-repeat center bottom;
+      width: 431px;
+      height: 278px; }
+      #for .f-right .right-t .in-t, #for .f-right .right-t .in-b, #for .f-right .right-t .in-rem {
+        width: 348px;
+        height: 52px;
+        border: 1px solid #ececec;
+        font-size: 0; }
+        #for .f-right .right-t .in-t #uname, #for .f-right .right-t .in-t #pwd, #for .f-right .right-t .in-b #uname, #for .f-right .right-t .in-b #pwd, #for .f-right .right-t .in-rem #uname, #for .f-right .right-t .in-rem #pwd {
+          width: 300px;
+          height: 100%;
+          display: inline-block;
+          font-size: 12px; }
+        #for .f-right .right-t .in-t span, #for .f-right .right-t .in-b span, #for .f-right .right-t .in-rem span {
+          display: inline-block;
+          width: 48px;
+          height: 25px;
+          vertical-align: middle;
+          text-align: center;
+          color: #bebebe;
+          font-size: 16px; }
+      #for .f-right .right-t .in-rem {
+        border: 0;
+        padding-top: 9px;
+        height: 41px; }
+        #for .f-right .right-t .in-rem .radio-wrap {
+          float: left;
+          width: 200px;
+          height: 41px; }
+          #for .f-right .right-t .in-rem .radio-wrap p {
+            float: left;
+            margin-left: 5px;
+            text-align: left; }
+        #for .f-right .right-t .in-rem #rem {
+          float: left;
+          margin-top: 6px; }
+        #for .f-right .right-t .in-rem b {
+          float: left;
+          width: 60px;
+          height: 20px;
+          color: #000; }
+        #for .f-right .right-t .in-rem p {
+          margin: 0;
+          float: right;
+          font-size: 12px;
+          text-align: right; }
+          #for .f-right .right-t .in-rem p a {
+            color: #d2d2d2; }
+      #for .f-right .right-t #log-btn {
+        width: 348px;
+        display: block;
+        height: 40px;
+        color: #fff;
+        background: #fe0a2e;
+        border: 1px solid #f37685; }
+      #for .f-right .right-t p {
+        height: 26px;
+        font-size: 12px;
+        line-height: 26px;
+        width: 112px;
+        margin: 23px auto 29px; }
+        #for .f-right .right-t p span {
+          float: left;
+          margin-right: 6px;
+          width: 26px;
+          height: 26px;
+          background: url(../loginImg/lome_03.jpg) no-repeat center; }
+    #for .f-right .right-b {
+      margin-top: 14px;
+      width: 390px;
+      padding-left: 41px; }
+      #for .f-right .right-b p {
+        font-size: 12px;
+        color: #000;
+        margin-bottom: 13px; }
+      #for .f-right .right-b .fly {
+        position: absolute;
+        width: 113px;
+        height: 38px;
+        background: #FE0A2E;
+        text-align: center;
+        line-height: 38px;
+        font-size: 12px;
+        right: 0;
+        bottom: -38px; }
+        #for .f-right .right-b .fly a {
+          color: #fff; }
+
+/*# sourceMappingURL=login.css.map */

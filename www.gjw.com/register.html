@@ -12,7 +12,7 @@
 			<div class="top">
 				<img src="loginImg/hd_logo.jpg" alt=""/>
 				<div class="Tright">
-					<b>您好，欢迎光临购酒网！</b>
+					<b>如您已有账户<a href="login.html"  class="login">请登录</a></b>
 					<a href="#">
 						<span></span>
 						帮助
@@ -38,32 +38,50 @@
 					<div class="phone f1">
 						<label for="txt">手机号:</label>
 						<input type="text" name="txt" id="txt" value="" />
+						<strong class="hint"></strong>
 					</div>
 					<div class="word f1">
 						<label for="txt">设置密码:</label>
 						<input type="password" name="word" id="word" value=""  placeholder="6-20个非空格字符"/>
+						<strong class="hint"></strong>
 					</div>
 					<div class="again f1">
 						<label for="agn">确认密码:</label>
 						<input type="password" name="agn" id="agn" value="" />
+						<strong class="hint"></strong>
 					</div>
 					<div class="validate">
 						<div class="vali-wrap">
 							<label for="vali">验证码:</label>
 							<input type="text" name="vali" id="vali" value="" placeholder="输入图片验证码">
 						</div>
-						<i></i>
-						<a>换一张</a>
+						<i id="yzm"></i>
+						<a class="change">换一张</a>
 					</div>
 					<div class="message">
 						<div class="messwrap">
-						<label for="mesBtn">效验码:</label>
-						<input type="button" id="mesBtn" value="获取效验码" />
+							<label for="mesBtn">效验码:</label>
+							<input type="button" id="mesBtn" value="获取效验码" />
 						</div>
-						<span></span>
+						<div class="spanwrap">
+							<span></span>
+							<div class="mes-c">
+								
+							</div>
+						</div>
 					</div>
+					<p class="agree">
+                                点击注册，表示您同意购酒网
+                                <em>《服务协议》</em>
+					</p>
+					<input type="button" name="yes" id="yes" value="注 册" />
 				</div>
+			</div>
+			<div class="r-right">
+				<img src="registerImg/right.jpg" alt=""/>
 			</div>
 		</div>
 	</body>
 </html>
+<script type="text/javascript" src="js/cookie.js" ></script>
+<script type="text/javascript" src="js/register.js" ></script>

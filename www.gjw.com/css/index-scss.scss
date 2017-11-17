@@ -17,6 +17,10 @@ img{display:block;border:0;}
         overflow: hidden;
     }
 }
+input{
+    border: 0;
+    outline: none;
+}
 html,body{
     height: 100%;
 }
@@ -24,9 +28,52 @@ $wrap:1200px;
 .marg{
     margin: 0 auto;
 }
-.header,#nav,.banner,#banner_bottom,.content,.private,.old,.discount,.wine,.sale,.boss{
+.header,#nav,.banner,#banner_bottom,.content,.private,.old,.discount,.wine,.sale,.boss,.audio,.foot-t,.footB{
     width: $wrap;
     @extend .marg
+}
+#fixTop{
+    width:1200px;
+    height: 50px;
+    background: #da2e2e;
+    position: fixed;
+    z-index: 50;
+    display: none;
+    .fixl{
+        float: left;
+        height: 40px;
+        padding: 10px 0 0 32px;
+        img{
+            float: left;
+        }
+        p{
+            float: left;
+            margin:6px 0 0 39px;
+            font-size:16px;
+            color: #f8dddd;
+        }
+    }
+    .fixr{
+        float: left;
+        margin-left: 60px;
+        margin-top: 6px;
+        border: 3px solid #c40000;
+        input{
+            float: left;
+        }
+        .fixTxt{
+           width: 565px; 
+           height: 33px;
+           padding-left: 5px;
+        }
+        .fixBtn{
+            width: 86px;
+            height: 33px;
+            background:#C40000;
+            color: #F8DDDD;
+            font-size: 16px;
+        }
+    }
 }
 //menu样式
 #menu{
@@ -35,6 +82,65 @@ $wrap:1200px;
     position: fixed;
     right: 0;
     background: #eaeaea;
+    z-index: 500;
+    .menu_in{
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        margin-top: -200px;
+        a{
+            display: block;
+            position: relative;
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            &:hover{
+                background:#C40000;
+                span{
+                    color: #fff;
+                }
+                .me-out{
+                    left:-100px;
+                    transform: scale(1);
+                    transform-style: left center;
+                    opacity: 1;
+                }
+            }
+            span{
+                font-size: 20px;
+                color:#C70225;
+            }
+            .me-out{
+                transition: 1s;
+                opacity: 0;
+                transform: scale(0);
+                position: absolute;
+                width: 100px;
+                height:43px;
+                background: #494949;
+                top: 0;
+                left:-122px;
+                font-size: 12px;
+                color: #fff;
+                line-height: 43px;
+                text-align: center;
+            }
+            b{
+                position: absolute;
+                height: 0;
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent  transparent transparent #494949;
+                right:-20px;
+                top: 50%;
+                margin-top: -10px;
+            }
+        }
+        a:nth-of-type(6){
+            top: 50px;
+        }
+    }
 }
 //头部样式
 #head_wrap{
@@ -95,25 +201,37 @@ $wrap:1200px;
                 padding-right: 24px;
                 margin-left: 24px;
                 line-height: 31px;
-                b{
+                &:hover{
+                    color: #8d8b8b;
+                } 
+            }
+            span:first-child{
+                font-size:12px;
+                color: #6d6b6a;
+                border-right: 1px solid #737070;
+                padding-right: 24px;
+                margin-left: 24px;
+                line-height: 31px;
+                padding-right: 4px;
+                .lo{
                     color: #948e20;
                     margin:0 11px;
+                    border:0;
+                    padding-right: 0;
                     &:hover{
                         opacity: 0.6;
                     }
                 }
-                i{
+                .rg{
+                     margin-left:0;
+                     padding: 0;
+                     border: 0;
+                     background: 0;
                     color: #948e20; 
                     &:hover{
                         opacity: 0.6;
                     }
                 } 
-                &:hover{
-                    color: #8d8b8b;
-                } 
-            }
-            a:first-child{
-                padding-right: 4px;
             }
             a:last-child{
                 border: none;
@@ -343,6 +461,7 @@ $wrap:1200px;
             color: #9e9589;
             text-align: center;
             line-height: 25px;
+            box-shadow: 0 0 4px 1px #fff;
         }
     }
     .fly{
@@ -363,6 +482,7 @@ $wrap:1200px;
         }
     }
 }
+//修饰banner
 #banner_bottom{
     height: 45px;
     border-bottom: 1px solid #f5f5f5;
@@ -389,6 +509,7 @@ $wrap:1200px;
         background: url(../img/phone-icon.png) no-repeat left;
     }
 }
+//特效样式
 .boxMove{
     top: 0;
     box-shadow: 0 15px 30px rgba(0,0,0,.1);
@@ -446,12 +567,13 @@ $wrap:1200px;
     padding: 0 18px;
     cursor: pointer;
 }
+//主体样式区
 #content_wrap{
     background: #F5F5F5;
     .content{
         min-height:300px;
     }
-    .private,.old,.discount,.wine,.sale{
+    .private,.old,.discount,.wine,.sale,.audio{
         min-height: 300px;
         margin-top: 50px;
         h3{
@@ -459,6 +581,24 @@ $wrap:1200px;
             margin: 0 0 0 4px;
             color: #000;
             padding-bottom: 8px;
+        }
+    }
+    .audio{
+        .aud{
+            float: left;
+            width: 282px;
+            margin:10px 18px 0 0;
+            div{
+                height: 60px;
+                padding-top: 28px;
+                text-align: center;
+                font-size: 16px;
+                color: #000;
+                background: #fff;
+            }
+            img{
+                margin: 0 auto;
+            }
         }
     }
     .boss{
@@ -497,6 +637,103 @@ $wrap:1200px;
             width: 200px;
             height: 200px;
             margin: 0 auto;
+        }
+    }
+}
+//尾部
+#foot_wrap{
+    .footT{
+        padding-top: 25px;
+        background:#3d3d3d;
+        height: 318px;
+        .foot-t{
+           height: 122px;
+           .f1{
+               margin-left: 23px;
+               float: left;
+               width: 298px;
+               height: 77px;
+               background: url(../img/cus_03.jpg);
+           }
+           .f2{
+               float: left;
+               margin: 40px 0 0 32px;
+           }
+           .f3{
+               float: right;
+               p{
+                   font-size: 12px;
+                   color: #fff;
+                   line-height: 17px;
+                   float: left;
+                   text-align:right;
+               }
+               img{
+                   width: 106px;
+                   float: left;
+                   margin: 0 24px 0 20px;
+               }
+           }
+        }
+    }
+    .foot-b{
+        width: 1150px;
+        border-top:6px solid #666 ;
+        margin: 0 auto;
+        padding-top: 44px;
+        dl{
+          width: 170px; 
+          float: left;
+          dt{
+              color: #e4d2ce;
+              font-size: 12px;
+              margin-bottom: 13px;
+          } 
+          dd{
+              font-size: 12px;
+              color: #757576;
+              line-height: 24px;
+          }
+        }
+        dl:nth-of-type(1){
+            margin-left: 100px;
+        }
+    }
+    .footB{
+        padding-top: 93px;
+        height: 110px;
+        background: url(../img/last.png) no-repeat center top;
+        .ovhi{
+            width: 100%;
+            height: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        ul{
+            width:900px;
+            left: 50%;
+            height: 110px;
+            margin-left: -450px;
+            position: absolute;
+            li{
+                font-size: 0;
+                text-align: center;
+                a{
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #000;
+                    padding:0 8px;
+                    margin-bottom: 5px;
+                    border-right: 1px solid #3C3226;
+                }
+            }
+        }
+        p{
+            margin: 30px auto;
+            text-align: center;
+            font-size: 12px;
+            color: #000;
         }
     }
 }

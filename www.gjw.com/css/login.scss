@@ -1,0 +1,186 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    background:#f2f2f2;
+}
+.marg{
+    margin: 0 auto;
+}
+$w:970px;
+//头部样式
+#Top{
+    height: 89px;
+    border-bottom: 1px solid #e7e7e7;
+    background: #fff;
+    .top{
+        width: $w;
+        height: 100%;
+        @extend .marg;
+        padding-top: 20px;
+        img{
+            float: left;
+        }
+        .Tright{
+            float: right;
+            font-size: 12px;
+            b{
+                color: #8e8e8e;
+                float: left;
+                padding: 18px 0;
+                
+            }
+            a{
+                float: left;
+                color: #000;
+                padding: 18px 0;
+            }
+            a:nth-of-type(1){
+                margin: 0 35px 0 11px;
+            }
+            a:nth-of-type(1) span{
+                float: left;
+                width: 18px;
+                height: 17px;
+                background:url(../loginImg/need_03.jpg) no-repeat center;
+            }
+            a:nth-of-type(2) span{
+                float: left;
+                width: 18px;
+                height: 17px;
+                background:url(../loginImg/inline_03.jpg) no-repeat center;
+            }
+        }
+    }
+}
+//表单样式
+#for{
+    padding: 70px 0 130px 0;
+    width: $w;
+    @extend .marg;
+    .f-left{
+      width: 438px;
+      height: 438px;
+      margin-right: 22px;
+      float: left;
+    }
+    .f-right{
+        position: relative;
+        width: 488px;
+        height: 435px;
+        border: 1px solid #e7e7e7;
+        float: left;
+        background: #fff;
+        .right-t{
+            background:url(../loginImg/loginfoot_03.jpg) no-repeat center bottom;
+            .in-t,.in-b,.in-rem{
+                width: 348px;
+                height: 52px;
+                border: 1px solid #ececec;
+                font-size: 0;
+                @extend .marg;
+                #uname,#pwd{
+                    width: 300px;
+                    height: 100%;
+                    display: inline-block;
+                    font-size: 12px;
+                }
+                    span{
+                        display: inline-block;
+                        width: 48px;
+                        height: 25px;
+                        vertical-align: middle;
+                        text-align: center;
+                        color: #bebebe;
+                        font-size: 16px;
+                    }
+            }
+            .in-rem{
+                border: 0;
+                padding-top: 9px;
+                height: 41px;
+                .radio-wrap{
+                    float: left;
+                    width: 200px;
+                    height: 41px;
+                    p{
+                        float: left;
+                        margin-left:5px;
+                        text-align: left;
+                    }
+                }
+                #rem{
+                    float: left;
+                    margin-top: 6px;
+                }
+                b{
+                    float: left;
+                    width: 60px;
+                    height: 20px;
+                    color: #000;
+                }
+                p{
+                    margin: 0;
+                    float: right;
+                    font-size: 12px;
+                    text-align: right;
+                    a{
+                        color: #d2d2d2;
+                    }
+                }
+            }
+            #log-btn{
+                width:348px;
+                display: block;
+                height: 40px;
+                color: #fff;
+                @extend .marg;
+                background: #fe0a2e;
+                border: 1px solid #f37685;
+            }
+            @extend .marg;
+            width: 431px;
+            height: 278px;
+            p{  
+//              text-align: center;
+                height: 26px;
+                font-size: 12px;
+                line-height: 26px;
+                width: 112px;
+                margin: 23px auto 29px;
+                span{
+                    float: left;
+                    margin-right: 6px;
+//                  vertical-align:top;
+                    width: 26px;
+                    height: 26px;
+                    background:url(../loginImg/lome_03.jpg) no-repeat center;
+                }
+            }
+        }
+        .right-b{
+            margin-top: 14px;
+            width: 390px;
+            padding-left: 41px;
+            @extend .marg;
+            p{
+               font-size: 12px;
+               color: #000; 
+               margin-bottom: 13px;
+            }
+            .fly{
+                position: absolute;
+                width: 113px;
+                height: 38px;
+                background: #FE0A2E;
+                text-align: center;
+                line-height: 38px;
+                font-size: 12px;
+                right:0;
+                bottom: -38px;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

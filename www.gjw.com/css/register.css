@@ -1,0 +1,220 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2; }
+
+.marg, #Top .top, #register, #register .r-left .top1, #register .r-left .content {
+  margin: 0 auto; }
+
+.lab, #register .r-left .content .phone label, #register .r-left .content .word label, #register .r-left .content .again label, #register .r-left .content .validate label, #register .r-left .content .message label, #register .r-left .content #yes label {
+  width: 44px;
+  padding-top: 20px;
+  height: 33px;
+  font-size: 12px;
+  line-height: 12px;
+  display: inline-block;
+  margin-left: 18px;
+  color: #969696;
+  vertical-align: middle; }
+
+.inp, #register .r-left .content .phone input, #register .r-left .content .word input, #register .r-left .content .again input, #register .r-left .content .validate input, #register .r-left .content .message input, #register .r-left .content #yes input {
+  width: 260px;
+  height: 24px;
+  line-height: 24px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  text-indent: 20px;
+  font-size: 12px; }
+
+#Top {
+  height: 89px;
+  border-bottom: 1px solid #e7e7e7;
+  background: #fff; }
+  #Top .top {
+    width: 970px;
+    height: 100%;
+    padding-top: 20px; }
+    #Top .top img {
+      float: left; }
+    #Top .top .Tright {
+      float: right;
+      font-size: 12px; }
+      #Top .top .Tright b {
+        color: #8e8e8e;
+        float: left;
+        padding: 18px 0; }
+        #Top .top .Tright b .login {
+          float: none;
+          padding: 0;
+          margin: 0;
+          color: #a4b7cd; }
+      #Top .top .Tright a {
+        float: left;
+        color: #000;
+        padding: 18px 0; }
+      #Top .top .Tright a:nth-of-type(1) {
+        margin: 0 35px 0 11px; }
+      #Top .top .Tright a:nth-of-type(1) span {
+        float: left;
+        width: 18px;
+        height: 17px;
+        background: url(../loginImg/need_03.jpg) no-repeat center; }
+      #Top .top .Tright a:nth-of-type(2) span {
+        float: left;
+        width: 18px;
+        height: 17px;
+        background: url(../loginImg/inline_03.jpg) no-repeat center; }
+
+#register {
+  width: 970px;
+  height: 566px;
+  border: 6px solid #d7d7d7;
+  margin-top: 24px;
+  background: #fff; }
+  #register .r-left {
+    width: 520px;
+    padding: 0 40px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #D7D7D7; }
+    #register .r-left .top1 {
+      width: 515px;
+      padding: 33px 0 26px 0;
+      border-bottom: 1px solid #D7D7D7; }
+      #register .r-left .top1 p {
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        padding-left: 110px; }
+      #register .r-left .top1 span {
+        float: left;
+        margin: 0 5px 0 89px;
+        width: 15px;
+        height: 24px;
+        background: url(../registerImg/rephone_03.jpg) no-repeat; }
+    #register .r-left .bott {
+      position: relative; }
+      #register .r-left .bott img {
+        position: absolute;
+        top: -1px; }
+    #register .r-left .content {
+      width: 350px;
+      height: 387px;
+      margin-top: 28px;
+      position: relative; }
+      #register .r-left .content .phone, #register .r-left .content .word, #register .r-left .content .again, #register .r-left .content .validate, #register .r-left .content .message, #register .r-left .content #yes {
+        width: 348px;
+        height: 52px;
+        border: 1px solid #D7D7D7;
+        margin-bottom: 12px; }
+        #register .r-left .content .phone strong, #register .r-left .content .word strong, #register .r-left .content .again strong, #register .r-left .content .validate strong, #register .r-left .content .message strong, #register .r-left .content #yes strong {
+          position: absolute;
+          font-size: 12px;
+          right: 0;
+          height: 52px;
+          line-height: 52px; }
+      #register .r-left .content .word {
+        margin-bottom: 0; }
+        #register .r-left .content .word label {
+          width: 56px; }
+      #register .r-left .content .again {
+        margin-bottom: 0;
+        border-top: 0; }
+        #register .r-left .content .again label {
+          width: 56px; }
+      #register .r-left .content .message {
+        margin: 20px 0 0  0; }
+        #register .r-left .content .message .messwrap {
+          float: left; }
+        #register .r-left .content .message .spanwrap {
+          float: left;
+          padding-top: 10px; }
+          #register .r-left .content .message .spanwrap .mes-c {
+            float: left;
+            line-height: 34px;
+            text-align: center;
+            color: #000;
+            width: 103px;
+            height: 34px;
+            border: 1px solid #D7D7D7; }
+        #register .r-left .content .message #mesBtn {
+          padding: 0;
+          text-align: center;
+          height: 31px;
+          width: 76px;
+          text-indent: 0;
+          background: #fdfdfd;
+          border: 1px solid #f3f3f3;
+          color: #b7b7b7;
+          cursor: pointer; }
+        #register .r-left .content .message span {
+          float: left;
+          width: 15px;
+          height: 24px;
+          background: url(../registerImg/rephone_03.jpg) no-repeat;
+          margin: 5px 9px 0 24px; }
+      #register .r-left .content .validate {
+        border: 0;
+        margin: 11px 0 0  0; }
+        #register .r-left .content .validate .vali-wrap {
+          width: 168px;
+          height: 100%;
+          border: 1px solid #D7D7D7;
+          float: left; }
+        #register .r-left .content .validate i {
+          float: left;
+          width: 120px;
+          height: 48px;
+          line-height: 48px;
+          margin: 0 4px 0 10px;
+          border: 3px solid #D7D7D7;
+          background: #000;
+          color: #fff;
+          text-align: center; }
+        #register .r-left .content .validate a {
+          float: left;
+          color: #8da6c1;
+          font-size: 12px;
+          height: 54px;
+          line-height: 54px;
+          cursor: pointer; }
+        #register .r-left .content .validate input {
+          width: 100px;
+          text-indent: 0; }
+      #register .r-left .content .agree {
+        font-size: 12px;
+        line-height: 12px;
+        color: #000;
+        margin: 14px 0; }
+        #register .r-left .content .agree em {
+          color: #bbc9da; }
+      #register .r-left .content #yes {
+        background: #fc504e;
+        color: #fff;
+        border: 1px solid #C40000; }
+  #register .r-right {
+    padding: 83px 0 0 35px;
+    float: left;
+    width: 330px;
+    height: 483px; }
+
+.f1 {
+  position: relative; }
+
+.focus {
+  border: 1px solid #66afdf;
+  box-shadow: 0 0 5px #66afdf;
+  color: #a94442; }
+
+.error {
+  box-shadow: 0 0 5px #a94442;
+  border: 1px solid #a94442;
+  color: #a94442; }
+
+.active {
+  border: 1px solid #3c763d;
+  box-shadow: 0 0 5px #3c763d;
+  color: #3c763d;
+  z-index: 3; }
+
+/*# sourceMappingURL=register.css.map */

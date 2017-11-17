@@ -67,7 +67,7 @@
 	var time=null;
 	var time2=null;
 	var content=document.getElementById("content_wrap")
-	var res=ajaxPromise("banner.json")
+	var res=ajaxPromise("index.json")
 	res.then(function(value){
 		var json=JSON.parse(value);
 		for (var key in json) {
@@ -76,7 +76,7 @@
 				var str="";
 				for (var i=0;i<len.length;i++) {
 					str+=`<div class="active">
-								<a href="new.html">
+								<a href="detail.html">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des">
 									<p>${len[i].name}</p>	
@@ -107,7 +107,7 @@
 				var len=json[key];
 				var str="";
 				out(len,str,key)
-			}else{
+			}else if(key=="6"){
 				var _left=0;
 				var len=json[key];
 				var str="";
@@ -149,7 +149,21 @@
 						}
 						
 					}
-				},4000)
+				},15000)
+			}else{
+				var len=json[key];
+				var str="";
+				for (var i=0;i<len.length;i++){
+					str+=`<div class="aud">
+								<a href="#">
+								<img src="img/${len[i].src}" alt=""/>
+								<div>
+									<p>${len[i].name}</p>	
+								</div>
+								</a>
+							</div>`
+				}
+				content.children[key].innerHTML+=str;
 			}
 		}
 	})
@@ -162,7 +176,7 @@
 			event.bind(this,e,"active",0)()
 			e.stopPropagation?e.stopPropagation():e.cancelBubble=true
 		})	
-	for (var j=1;j<content.children.length-1;j++) {
+	for (var j=1;j<content.children.length-2;j++) {
 		content.children[j].addEventListener("mouseover",function(e){
 			clearTimeout(time)
 			time=setTimeout(event.bind(this,e,"active1 boxMove",-8),200)
@@ -204,5 +218,73 @@
 					}
 				}
 		content.children[key].innerHTML+=str;
+	}
+})();
+//吸顶,menu效果
+(function(){
+	var time=null;
+	var timer=null;
+	var _top=null;
+	var last=document.getElementsByClassName("menu-last")[0];
+	var fixTop=document.getElementById("fixTop");
+	var con=document.getElementById("content_wrap");
+	window.onscroll=function(){
+		_top=document.documentElement.scrollTop|| document.body.scrollTop;
+		clearTimeout(time)
+		time=setTimeout(function(){
+			if(_top>con.offsetTop){
+				fixTop.style.display="block"
+			}else{
+				fixTop.style.display="none"
+			}
+		},40)
+	}
+	last.onclick=function(){
+		timer=setInterval(function(){
+			_top-=5;
+			document.documentElement.scrollTop=document.body.scrollTop=_top;
+			if(_top<=0){
+				clearInterval(timer)
+			}
+		},1)
+	}
+	
+})();
+//尾部效果
+(function(){
+	var time=null;
+	var _top=0;
+	var list=document.getElementsByClassName("fb_ul")[0];
+	time=setInterval(function(){
+		if(_top==-30){
+			list.style.top=0+"px";
+			_top=0;
+		}else{
+			_top-=15;
+		}
+		startMove(list,{"top":_top})
+	},2000)
+})();
+//操作cookie
+(function(){
+	var obj=null;
+	var uname=null;
+	var pwd=null;
+	var status=document.getElementsByClassName("h_right")[0].children[0];
+	setCookie("count",0,10);
+	var cookie=document.cookie;
+	var arr=cookie.split("; ");
+	for (var i=0;i<arr.length;i++) {
+		var item=arr[i].split("=");
+		if(item[0].indexOf("user")!=-1 && JSON.parse(item[1]).inline==1){
+			var title=item[0];
+			uname=JSON.parse(item[1]).username;
+			pwd=JSON.parse(item[1]).pwd;
+			status.innerHTML="欢迎 "+uname+"<a href='login.html' style='margin:0;background:none;color:##948e20'> 用户登录</a>"
+			status.style.color="#C70225";
+			break;
+		}else if(item[0]=="count"){
+			return 
+		}
 	}
 })()
