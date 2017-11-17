@@ -3,7 +3,360 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/commit.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
 	</head>
-	<body>
+	<body><!--右边导航菜单-->
+		<div id="menu">
+			<div class="menu_in">
+				<a href="javascript:;">
+					<span class="iconfont icon-wo"></span>
+					<div class="me-out">会员中心<b></b></div>
+				</a>
+				<a href="javascript:;">
+					<span class="iconfont icon-gouwuche1">购物车</span>
+				</a>
+				<a href="javascript:;">
+					<span class="iconfont icon-qiajuan"></span>
+					<div class="me-out">我的卡卷<b></b></div>
+				</a>
+				<a href="javascript:;">
+					<span class="iconfont icon-shoucang"></span>
+					<div class="me-out">我的收藏<b></b></div>
+				</a>
+				<a href="javascript:;">
+					<span class="iconfont icon-tubiaozhizuo--"></span>
+					<div class="me-out">在线客服<b></b></div>
+				</a>
+				<a href="javascript:;" class="menu-last">
+					<span class="iconfont icon-fa-angle-up"></span>
+				</a>
+			</div>
+		</div>
+		<!--头部-->
+		<div id="head_wrap">
+			<div class="header">
+				<!--<div id="fixTop">
+					<div class="fixl">
+						<img src="img/吸顶123.jpg" alt=""/>
+						<p>满百就包邮</p>
+					</div>
+					<div class="fixr">
+						<input type="text" class="fixTxt" value="" placeholder="茅台飞天" />
+						<input type="button" name="" class="fixBtn" value="搜索" />
+					</div>
+				</div>-->
+				<div class="h_left">
+					<img src="img/ewms.png" class="h-img"/>
+					<span>购酒网APP</span>
+					<span>&lt;</span>
+					<i><img src="img/APP.png"/></i>
+				</div>
+				<div class="h_right">
+					<span>Hi,请<a href="login.html" class="lo">登录/</a><a href="register.html?" class="rg"> 注册</a></span>
+					<a href="javascript:;">我的订单</a >
+					<a href="javascript:;">个人中心</a >
+					<a href="javascript:;">在线客服</a >
+					<a href="javascript:;">购酒公告</a >
+					<a href="javascript:;">帮助</a >
+					<a href="javascript:;">提意见</a >
+					<a href="javascript:;">400-722-1919</a >
+				</div>
+			</div>
+		</div>
+		<!--nav-->
+		<div id="nav">
+			<div class="flag"></div>
+			<div class="logo">
+				<div class="logo1">
+					<img src="img/logo1.jpg" alt=""/>
+				</div>
+				<div class="logo2">
+					<img src="detail/doman.gif" alt=""/>
+				</div>
+				<div class="logo_c">
+					<form action="" method="post" class="search" onsubmit="return false">
+						<input type="text" id="txt" value="" placeholder="飞天茅台" />
+						<input type="submit" value="搜索" class="sub"/>
+					</form>
+					<div class="logo_b">
+						<a href="javascript:;">茅台</a>
+						<a href="javascript:;">五粮液</a>
+						<a href="javascript:;">拉菲</a>
+						<a href="javascript:;">剑南春</a>
+						<a href="javascript:;">泸州老窖</a>
+						<a href="javascript:;">竹叶青</a>
+						<a href="javascript:;">花雕</a>
+						<a href="javascript:;">葡萄酒</a>
+					</div>
+				</div>
+				<div class="s-cal">
+					去购物车结算&gt;
+					<span>0</span>
+				</div>	
+			</div>
+			<div class="navlist">
+				<div class="all">
+					<p>全部分类</p>
+					<ul class="some">
+						<li><a href="javascript:;">一件选购</a>
+							<div class="someBox">
+								<img src="img/list1.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">白酒</a>
+							<div class="someBox ">
+								<img src="img/list2.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">葡萄酒</a>
+							<div class="someBox " >
+								<img src="img/list6.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">一件选购</a>
+							<div class="someBox">
+								<img src="img/list3.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">一件选购</a>
+							<div class="someBox">
+								<img src="img/list4.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+								</div>
+								<div class="box3">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">洋酒</a>
+							<div class="someBox">
+								<img src="img/list5.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">一件选购</a>
+							<div class="someBox">
+								<img src="img/list1.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">酒吧周边</a>
+							<div class="someBox">
+								<img src="img/list2.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+								<div class="box2">
+									<h6>红酒推荐</h6>
+									<div class="span_wrap">
+										<span>红酒直销</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+									</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">新品</a>
+							<div class="someBox">
+								<img src="img/list3.png" alt=""/>
+								<div class="box4">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="javascript:;">一件选购</a>
+							<div class="someBox">
+								<img src="img/list5.png" alt=""/>
+								<div class="box1">
+									<h6>购酒推荐</h6>
+									<div class="span_wrap">
+										<span>特卖会</span>
+										<span>高端收藏</span>
+										<span>大坛酒专场</span>
+										<span>年份老酒</span>
+										<span>飞天茅台</span>
+										<span>特卖会</span>
+									</div>
+								</div>
+						</li>
+					</ul>
+				</div>
+				<ul class="z-nav">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">特卖会</a></li>
+					<li><a href="javascript:;">进门管</a></li>
+					<li><a href="javascript:;">居酒屋</a></li>
+					<li><a href="javascript:;">商家采购</a></li>
+					<li><a href="javascript:;">高端收藏</a></li>
+					<li><a href="javascript:;">购酒主推</a></li>
+					<li><a href="javascript:;" class="last-a">尾货直销</a></li>
+				</ul>
+				<img src="img/navright.gif" alt=""/>
+			</div>
+		</div>
+		<!--main-->
+		<div id="main_wrap">
+			<div class="main">
+				<div class="detail clearfix">
+					<div class="de_left">
+						<ul class="list">
+							<li><img src="detail/m1.jpg"/></li>
+							<li><img src="detail/m2.jpg"/></li>
+							<li><img src="detail/m3.jpg"/></li>
+							<li><img src="detail/m4.jpg"/></li>
+							<li><img src="detail/m5.jpg"/></li>
+						</ul>
+						<div class="small">
+							<img src="detail/s1.jpg" alt="" class="smallImg"/>
+							<div class="mask">
+								
+							</div>
+							<div class="big">
+								<img src="detail/s1.jpg" alt="" class="bigImg"/>
+							</div>
+						</div>
+					</div>
+					<div class="de_right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
+<script type="text/javascript" src="js/ajaxPro.js" ></script>
+<script type="text/javascript" src="js/detail.js" ></script>

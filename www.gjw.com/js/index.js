@@ -76,7 +76,7 @@
 				var str="";
 				for (var i=0;i<len.length;i++) {
 					str+=`<div class="active">
-								<a href="detail.html">
+								<a href="detail.html?id=${key+i}" style="display:block">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des">
 									<p>${len[i].name}</p>	
@@ -168,8 +168,7 @@
 		}
 	})
 		content.children[0].addEventListener("mouseover",function(e){
-			clearTimeout(time)
-			time=setTimeout(event.bind(this,e,"active boxMove",-8),200)
+			event.bind(this,e,"active boxMove",-8)()
 			e.stopPropagation?e.stopPropagation():e.cancelBubble=true
 		})
 		content.children[0].addEventListener("mouseout",function(e){
@@ -191,7 +190,7 @@
 			var e=e||event;
 			var target=e.target||e.srcElement;
 			if(target!=tar){
-				if((target.className=="des" ||target.tagName=="IMG")){
+				if(target.tagName=="IMG" || target.className=="des"){
 					target.parentNode.parentNode.className=cls;
 					startMove(target.parentNode.parentNode,{"top":top})
 				}
@@ -201,13 +200,13 @@
 		for (var i=0;i<len.length;i++) {
 					if(i==0 || i==5){
 						str+=`<div class="active" style="margin-top:12px; height:298px">
-								<a href="#">
+								<a href="detail.html?id=${key+i}">
 								<img src="img/${len[i].src}" alt=""/>
 								</a>
 							</div>`
 					}else{
 						str+=`<div class="active1">
-								<a href="#">
+								<a href="detail.html?id=${key+i}">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des1">
 									<p>${len[i].name}</p>	
