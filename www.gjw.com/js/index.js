@@ -76,7 +76,7 @@
 				var str="";
 				for (var i=0;i<len.length;i++) {
 					str+=`<div class="active">
-								<a href="detail.html?id=${key+i}" style="display:block">
+								<a href="detail.html?id=shop${key+i}" style="display:block">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des">
 									<p>${len[i].name}</p>	
@@ -200,13 +200,13 @@
 		for (var i=0;i<len.length;i++) {
 					if(i==0 || i==5){
 						str+=`<div class="active" style="margin-top:12px; height:298px">
-								<a href="detail.html?id=${key+i}">
+								<a>
 								<img src="img/${len[i].src}" alt=""/>
 								</a>
 							</div>`
 					}else{
 						str+=`<div class="active1">
-								<a href="detail.html?id=${key+i}">
+								<a href="detail.html?id=shop${'0'+i}">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des1">
 									<p>${len[i].name}</p>	

@@ -377,12 +377,11 @@ $wrap:1200px;
     .main{
         min-height: 50px;
         padding-top: 50px;
+        background: #fff;
         .detail{
             height:auto;
-            background: #fff;
             .de_left{
                 width: 548px;
-                height:510px;
                 padding: 20px 0 0 45px;
                 float: left;
                 .list{
@@ -390,8 +389,8 @@ $wrap:1200px;
                     margin-right: 20px;
                     float: left;
                     li{
-                        width: 76px;
-                        height: 76px;
+                        width: 72px;
+                        height: 72px;
                         padding: 1px;
                         border: 1px solid #f9f9f9;
                         margin-bottom: 10px;
@@ -417,6 +416,7 @@ $wrap:1200px;
                         opacity: 0.5;
                         top: 0;
                         left: 0;
+                        position: absolute;
                     }
                 }
                 .big{
@@ -430,6 +430,137 @@ $wrap:1200px;
                         position: absolute;
                     }
                 }
+            }
+            .de_right{
+                width: 606px;
+                float: left;
+                padding-top: 22px;
+                .title{
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #000;
+                    font-weight: 900;
+                    margin-bottom: 10px;
+                }
+                .des{
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #f0a5a6;
+                }
+                .price{
+                    width: 520px;
+                    height:70px;
+                    padding: 27px 0 0 10px;
+                    background: #f6f5f5;
+                    margin-top: 10px;
+                    p{
+                        height: 22px;
+                        margin-bottom: 17px;
+                        font-size: 12px;
+                        color: #b9b8b8;
+                    }
+                    p:nth-of-type(1){
+                        em{
+                            font-size: 18px;
+                            color: #ce341b;
+                            margin-left: 17px;
+                        }
+                    }
+                    p:nth-of-type(2){
+                        em{
+                            display: inline-block;
+                            width: 52px;
+                            height: 21px;
+                            line-height: 21px;
+                            color: #fff;
+                            background: #CE341B;
+                            text-align: center;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .count{
+                    height: 30px;
+                    margin: 15px 0 19px 0;
+                    p{
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 12px;
+                        color: #ccc;
+                        float: left;
+                        margin-right: 16px;
+                    }
+                    .b1{
+                        float: left;
+                        input{
+                            width: 36px;
+                            height: 28px;
+                            border: 1px solid #ccc;
+                            float: left;
+                            text-align: center;
+                        }
+                        .b2{
+                            float: left;
+                            width: 20px;
+                            height: 30px;
+                            margin-left: 4px;
+                            span{
+                                cursor: pointer;
+                                text-align: center;
+                                display: block;
+                                width: 18px;
+                                line-height: 12px;
+                                height: 12px;
+                                border: 1px solid #ccc;
+                            }
+                            span:nth-of-type(1){
+                                margin-bottom: 2px;
+                            }
+                        }
+                    }
+                }
+                .money{
+                    a{
+                        float: left;
+                        width: 179px;
+                        height: 39px;
+                        line-height: 39px;
+                        border: 1px solid #C40000;
+                        text-align: center;
+                    }
+                    .now{
+                        background: #ffeeee;
+                        color: #C40000;
+                    }
+                    .shopping{
+                        background: #C40000;
+                        color: #fff;
+                        margin: 0 8px 0 6px;
+                    }
+                    h5{
+                        float: left;
+                        color: #b8b8b8;
+                        height: 40px;
+                        line-height: 40px;
+                        padding-left: 25px;
+                        font-size: 12px;
+                        background:url(../detail/phone_03.jpg) no-repeat left center;
+                    }
+                }
+            }
+        }
+        .share{
+            width: 502px;
+            padding-left: 46px;
+            font-size: 12px;
+            color: #b3b5b6;
+            p{
+                float: left;
+                background: url(../detail/detailweibo_03.jpg) no-repeat right center;
+                padding-right: 66px;
+            }
+            span{
+                float: right;
             }
         }
     }

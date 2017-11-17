@@ -4,21 +4,26 @@ window.onload=function(){
 function Detail(){
 	this.uname=null;
 	this.pro=null;
+	this.href=null;
+	this.title=document.getElementsByClassName("title")[0];
+	this.des=document.getElementsByClassName("des")[0];
+	this.discount=document.getElementsByClassName("discount")[0];
 	this.status=document.getElementsByClassName("h_right")[0].children[0];
 	this.list=document.getElementsByClassName("list")[0];
 	this.small=document.getElementsByClassName("small")[0];
 	this.big=this.small.getElementsByClassName("big")[0];
-	this.smallImg=this.small.getElementsByClassName("smallImg")[0];
+	this.smallImg=this.small.children[0];
 	this.mask=this.small.getElementsByClassName("mask")[0];
 	this.bigImg=this.small.getElementsByClassName("bigImg")[0];
 }
 Detail.prototype={
 	init:function(){
+		this.smallImg=this.small.children[0];
+		this.getAjax();
 		this.Change();
 		this.move();
 		this.getCookie();
 		this.showList();
-		this.getAjax()
 	},
 	Change:function(){
 		var that=this;
@@ -104,9 +109,32 @@ Detail.prototype={
 	},
 	getAjax:function(){
 		var that=this;
-		this.pro=ajaxPromise("http://127.0.0.1/www.gjw.com/detail.json");
+		var str="";
+		this.pro=ajaxPromise("detail.json");
 		this.pro.then(function(res){
 			var success=JSON.parse(res);
+			for (var key in success) {
+				if(key==that.getHref()){
+					var data=success[key]
+					str=`<li><img src="detail/${data.srcm1}"/></li>
+							<li><img src="detail/${data.srcm2}"/></li>
+							<li><img src="detail/${data.srcm3}"/></li>
+							<li><img src="detail/${data.srcm4}"/></li>
+							<li><img src="detail/${data.srcm5}"/></li>`
+					that.smallImg.src=`detail/${data.srcs1}`;
+					that.bigImg.src=`detail/${data.srcs1}`;
+					that.title.innerHTML=data.name;
+					that.discount.innerHTML=data.price;
+					that.des.innerHTML=data.explain;
+					break;
+				}
+				
+			}
+			that.list.innerHTML=str;
 		})
+	},
+	getHref:function(){
+		var search=location.search;
+		return search.split("=")[1];
 	}
 }
