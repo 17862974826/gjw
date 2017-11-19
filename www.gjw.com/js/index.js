@@ -76,7 +76,7 @@
 				var str="";
 				for (var i=0;i<len.length;i++) {
 					str+=`<div class="active">
-								<a href="detail.html?id=shop${key+i}" style="display:block">
+								<a href="detail.html?id=shop${key+i}"  style="display:block" target="_blank">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des">
 									<p>${len[i].name}</p>	
@@ -200,13 +200,13 @@
 		for (var i=0;i<len.length;i++) {
 					if(i==0 || i==5){
 						str+=`<div class="active" style="margin-top:12px; height:298px">
-								<a>
+								<a href="detail.html?id=shop${'0'+i}"  target="_blank">
 								<img src="img/${len[i].src}" alt=""/>
 								</a>
 							</div>`
 					}else{
 						str+=`<div class="active1">
-								<a href="detail.html?id=shop${'0'+i}">
+								<a href="detail.html?id=shop${'0'+i}"  target="_blank">
 								<img src="img/${len[i].src}" alt=""/>
 								<div class="des1">
 									<p>${len[i].name}</p>	
@@ -266,7 +266,9 @@
 })();
 //操作cookie
 (function(){
+	var all=0;
 	var obj=null;
+	var cal=document.getElementsByClassName("s-cal")[0].children[0]
 	var uname=null;
 	var pwd=null;
 	var status=document.getElementsByClassName("h_right")[0].children[0];
@@ -281,6 +283,10 @@
 			pwd=JSON.parse(item[1]).pwd;
 			status.innerHTML="欢迎 "+uname+"<a href='login.html' style='margin:0;background:none;color:##948e20'> 用户登录</a>"
 			status.style.color="#C70225";
+			for (var j=0;j<JSON.parse(item[1]).shopping.length;j++) {
+					all+=JSON.parse(item[1]).shopping[j].size*1	
+			}
+			cal.innerHTML=all;
 			break;
 		}else if(item[0]=="count"){
 			return 

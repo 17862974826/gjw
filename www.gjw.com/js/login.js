@@ -20,10 +20,12 @@ Login.prototype={
 		for (var i=0;i<arr.length;i++) {
 			var item=arr[i].split("=");
 			var res=JSON.parse(item[1])
+			console.log(res.shopping)
 			var json={
 					username:res.username,
 					pwd:res.pwd,
-					inline:0
+					inline:0,
+					shopping:res.shopping
 			}
 			setCookie(item[0],JSON.stringify(json),10);
 		}
@@ -39,7 +41,8 @@ Login.prototype={
 				var json={
 					username:res.username,
 					pwd:res.pwd,
-					inline:1
+					inline:1,
+					shopping:res.shopping
 				}
 				setCookie(item,JSON.stringify(json),10);
 				location.href="index.html";

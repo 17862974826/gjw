@@ -121,14 +121,15 @@ Register.prototype={
 			var json={
 				username:this.uname.value,
 				pwd:this.pwd.value,
-				inline:0
+				inline:0,
+				shopping:[]
 			}
 			if(document.cookie){
 				var cookie=document.cookie;
 				var arr=cookie.split("; ");
 				for (var i=0;i<arr.length;i++) {
 					var item=arr[i].split("=")[1];
-					console.log(JSON.parse(item).username)
+//					console.log(JSON.parse(item).username)
 					if(JSON.parse(item).username==this.uname.value){
 						alert("手机号已注册");
 						return false;
