@@ -50,7 +50,6 @@ Shopping.prototype={
 								foo.push(JSON.parse(item[1]).shopping[j])
 							}
 						}	
-						console.log(foo)
 						var json={
 							"username":JSON.parse(item[1]).username,
 							"pwd":JSON.parse(item[1]).pwd,
@@ -59,7 +58,6 @@ Shopping.prototype={
 						}
 						setCookie(item[0],JSON.stringify(json),10)
 						this.getAjax();
-						break;
 					}				
 				}
 				return false;
@@ -192,7 +190,7 @@ Shopping.prototype={
 							</li>
 							<li class="count1">
 								<span class="add">+</span>
-								<input type="text" class="tgh" value=${this.brr[i].size} />
+								<input type="text" class="tgh" value=${this.brr[i].size} disabled="disabled" />
 								<span class="redu">-</span>
 							</li>
 							<li class="cal1">
